@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Curated Content popup</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <form method="POST" action="http://localhost:8080/user">
+      Username:
+      <input type="text" id="username" name="username" />
+      Password:
+      <input type="password" id="password" name="password" />
+      <input type="submit"  value="Sign-in">
+    </form>
+    <h3>Add:</h3>
+    <form method="POST" action="http://localhost:8080/save_bookmarks">
+      Title:
+      <input id="title" type="text" name="title" placeholder="Title"/>
+      Description:
+      <textarea id="description" type="text" name="description" placeholder="Your description here..."></textarea>
+      Tags:
+      <input id="tags" type="text" name="tags" placeholder="list tags here"/>
+      <input id="url" type="text" name="url" style="display: none" />
+      <input id="dateAdded" type="text" name="dateAdded" style="display: none" />
+      <input id="image" type="text" name="image" style="display: none" />
+      <input type="submit" value="send">
+    </form>
+    <script src="js/popup.js"></script>
+
+  </body>
+</html>

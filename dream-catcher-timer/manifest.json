@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Pomodoro Timer",
+  "description": "This will send info to a server to be read by an app on your phone to alert
+                  alert you about when to take a break.",
+  "version": "1.0",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
