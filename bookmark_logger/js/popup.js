@@ -23,8 +23,8 @@ chrome.tabs.getSelected(function(tab){
         }
         document.getElementById('image').value = decodeURIComponent(response.image)
         document.getElementById('url').value = decodeURIComponent(response.url)
-        document.getElementById('dateAdded').value = decodeURIComponent(response.dateAdded)
+        document.getElementById('dateAdded').value = Date.now()
+
         })
     })
-
 })

@@ -5,7 +5,9 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
   console.log(request)
-  if (request.message === 'get data') {
+  if (request.message === 'info sent') {
+    sendResponse({message: 'close window'})
+  } else if (request.message === 'get data') {
     sendResponse({title: window.title,
                   description: window.description,
                   image: window.image,
@@ -36,7 +38,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
     if (!request.image) {
       window.dateAdded = ''
     } else {
-      window.dateAdded = request.dateAdded
+      window.dateAdded = Date.now()
     }
   }
 })

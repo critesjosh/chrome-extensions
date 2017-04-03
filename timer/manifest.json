@@ -1,26 +1,27 @@
 {
 
   "manifest_version": 2,
-  "name": "countdown to break",
-  "version": "1.0",
+  "name": "Josh's Tomato",
+  "version": "1.1.2",
 
-  "description": "Saves sites to MongoDB.",
+  "description": "Remember to take a break, and note your great ideas.",
 
   "icons": {
-    "48": "icons/clock-icon.png"
+    "48": "icons/clock_icon128.png"
   },
   "background": {
-    "persistent": false,
+    "persistent": true,
     "scripts": ["background.js"]
   },
   "browser_action": {
-    "default_icon": "icons/clock-icon.png"
+    "default_icon": "icons/clock_icon128.png"
     },
   "permissions": [
     "tabs",
+    "background",
     "storage",
+    "notifications",
     "http://localhost:8080/",
-    "https://brand-site.herokuapp.com/",
     "http://*/*",
     "https://*/*"
   ]
