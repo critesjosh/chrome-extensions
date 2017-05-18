@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "Notify Me",
+  "version": "1.1.2",
+
+  "description": "Set a notification to say whatever you want and fire it whenever you want.",
+
+  "icons": {
+  },
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    },
+  "permissions": [
+    "tabs",
+    "background",
+    "storage",
+    "notifications",
+    "http://localhost:8080/",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
